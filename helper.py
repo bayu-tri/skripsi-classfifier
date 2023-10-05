@@ -8,10 +8,10 @@ import tensorflow as tf
 
 import pandas as pd
 
-from tensorflow.keras.models import load_model
+from tensorflow import keras
+
+from keras.models import load_model
 
 from matplotlib import pyplot
 
-from PIL import Image
-
-from tensorflow import keras
+from PIL import Image, ImageOps
