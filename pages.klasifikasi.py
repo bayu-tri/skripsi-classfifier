@@ -9,7 +9,6 @@ def classify_image(image):
 
     # Praproses gambar (misalnya, resize dan normalisasi)
     image = np.array(image)  # Konversi gambar ke tipe data NumPy
-    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)  # Ubah format warna gambar jika diperlukan
     image = cv2.resize(image, (224, 224))  # Resize gambar menggunakan cv2
     image = image / 127.5  # Normalisasi nilai piksel menjadi rentang [0, 1]
 
