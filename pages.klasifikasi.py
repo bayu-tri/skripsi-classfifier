@@ -5,7 +5,7 @@ from helper import *
 def classify_image(image):
 
     # Muat model Anda di sini
-    model = load_model(os.path.join(os.getcwd(), 'static', 'Model.h5'))
+    model = load_model(os.path.join(os.getcwd(), 'static', 'Model-New.h5'))
 
     # Praproses gambar (misalnya, resize dan normalisasi)
     image = np.array(image)  # Konversi gambar ke tipe data NumPy
