@@ -10,7 +10,7 @@ def classify_image(image):
     # Praproses gambar (misalnya, resize dan normalisasi)
     image = np.array(image)  # Konversi gambar ke tipe data NumPy
     image = cv2.resize(image, (224, 224))  # Resize gambar menggunakan cv2
-    image = image / 127.5  # Normalisasi nilai piksel menjadi rentang [0, 1]
+    image = image / 127.5  # Normalisasi nilai piksel
 
 
     image = np.expand_dims(image, axis=0)
@@ -46,8 +46,8 @@ def brightness_image(image):
     image = np.array(image)
 
     # Augmentasi citra dengan perubahan brightness
-    brightness_factor_plus = 1.5  # Faktor brightness (misalnya 1.5 untuk peningkatan brightness)
-    brightness_factor_minus = 0.5  # Faktor brightness (misalnya 1.5 untuk peningkatan brightness)
+    brightness_factor_plus = 1.4  # Faktor brightness (misalnya 1.5 untuk peningkatan brightness)
+    brightness_factor_minus = 0.6  # Faktor brightness (misalnya 1.5 untuk peningkatan brightness)
 
     brightened_image = cv2.convertScaleAbs(image, alpha=brightness_factor_plus, beta=0)
     darkened_image = cv2.convertScaleAbs(image, alpha=brightness_factor_minus, beta=0)
