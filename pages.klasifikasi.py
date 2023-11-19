@@ -135,7 +135,7 @@ if uploaded_image is not None:
 
         st.image(image, width=224)
         predicted_class, result_confidence = classify_image_treshold(image)
-        if predicted_class == 'Kelas lain':
+        if predicted_class == 'Kelas Lain':
             st.error(
                 f"Citra masukkan bukan salah satu dari rimpang ***Jahe***, ***Kencur***, ***Kunyit*** atau ***Lengkuas***", icon="ℹ️")
         else:
