@@ -137,7 +137,7 @@ if uploaded_image is not None:
         predicted_class, result_confidence = classify_image_treshold(image)
         st.info(
             # f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-            f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***", icon="ℹ️")
+            f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
 
         # # tab1, tab2, tab3, tab4 = st.tabs(
         # tab1, tab2 = st.tabs(
