@@ -134,20 +134,21 @@ if uploaded_image is not None:
     if st.button('Klasifikasikan'):
 
         # tab1, tab2, tab3, tab4 = st.tabs(
-        tab1, tab2 = st.tabs(
-            ["With Treshold 0.5", "No Treshold"])
+        tab1 = st.tabs(
+            ["Hasil Klasifikasi :"])
         with tab1:
             st.image(image, width=224)
             predicted_class, result_confidence = classify_image_treshold(image)
             st.info(
-                f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
+                # f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
+                f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***", icon="ℹ️")
 
-        with tab2:
-            st.image(image, width=224)
-            predicted_class, result_confidence = classify_image_no_treshold(
-                image)
-            st.info(
-                f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
+        # with tab2:
+        #     st.image(image, width=224)
+        #     predicted_class, result_confidence = classify_image_no_treshold(
+        #         image)
+        #     st.info(
+        #         f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
 
         # with tab2:
         #     col1, col2 = st.columns(2)
