@@ -135,67 +135,9 @@ if uploaded_image is not None:
 
         st.image(image, width=224)
         predicted_class, result_confidence = classify_image_treshold(image)
-        st.info(
-            # f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-            f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-
-        # # tab1, tab2, tab3, tab4 = st.tabs(
-        # tab1, tab2 = st.tabs(
-        #     ["Hasil Klasifikasi :", "Hasil Klasifikasi Tanpa Treshold :"])
-        # with tab1:
-        #     st.image(image, width=224)
-        #     predicted_class, result_confidence = classify_image_treshold(image)
-        #     st.info(
-        #         # f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-        #         f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***", icon="ℹ️")
-
-        # with tab2:
-        #     st.image(image, width=224)
-        #     predicted_class, result_confidence = classify_image_no_treshold(
-        #         image)
-        #     st.info(
-        #         f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-
-        # with tab2:
-        #     col1, col2 = st.columns(2)
-
-        #     with col1:
-        #         st.image(rotated_image_right, width=224)
-        #         predicted_class, result_confidence = classify_image(
-        #             rotated_image_right)
-        #         st.info(
-        #             f"Hasil klasifikasi citra Rotasi 30° Ke Kiri adalah ***{predicted_class}***, nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-
-        #     with col2:
-        #         st.image(rotated_image_left, width=224)
-        #         predicted_class, result_confidence = classify_image(
-        #             rotated_image_left)
-        #         st.info(
-        #             f"Hasil klasifikasi citra Rotasi 30° Ke Kanan adalah ***{predicted_class}***, nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-
-        # with tab3:
-        #     col1, col2 = st.columns(2)
-
-        #     with col1:
-        #         st.image(brightened_image, width=224)
-        #         predicted_class, result_confidence = classify_image(
-        #             brightened_image)
-        #         st.info(
-        #             f"Hasil klasifikasi citra Kecarahan +50% adalah ***{predicted_class}***, nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-
-        #     with col2:
-        #         st.image(darkened_image, width=224)
-        #         predicted_class, result_confidence = classify_image(
-        #             darkened_image)
-        #         st.info(
-        #             f"Hasil klasifikasi citra Kecarahan -50% adalah ***{predicted_class}***, nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-
-        # with tab4:
-        #     st.image(shear_image, width=224)
-        #     predicted_class, result_confidence = classify_image(shear_image)
-        #     st.info(
-        #         f"Hasil klasifikasi citra Shear adalah ***{predicted_class}***, nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-
-        # st.image(zoomed_out_image, width=224)
-        # predicted_class, result_confidence = classify_image(zoomed_out_image)
-        # st.info(f"Hasil klasifikasi citra yang diperkecil 60% adalah {predicted_class}, dengan nilai keyakinan {result_confidence:.2%}", icon="ℹ️")
+        if predicted_class == 'Kelas lain':
+            st.error(
+                f"Citra masukkan bukan salah satu dari rimpang ***Jahe***, ***Kencur***, ***Kunyit*** atau ***Lengkuas***", icon="ℹ️")
+        else:
+            st.info(
+                f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***", icon="ℹ️")
