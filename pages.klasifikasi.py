@@ -133,15 +133,21 @@ if uploaded_image is not None:
     # Klasifikasikan gambar saat tombol "Klasifikasikan" ditekan
     if st.button('Klasifikasikan'):
 
-        # tab1, tab2, tab3, tab4 = st.tabs(
-        tab1 = st.tabs(
-            ["Hasil Klasifikasi :"])
-        with tab1:
-            st.image(image, width=224)
-            predicted_class, result_confidence = classify_image_treshold(image)
-            st.info(
-                # f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
-                f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***", icon="ℹ️")
+        st.image(image, width=224)
+        predicted_class, result_confidence = classify_image_treshold(image)
+        st.info(
+            # f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
+            f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***", icon="ℹ️")
+
+        # # tab1, tab2, tab3, tab4 = st.tabs(
+        # tab1, tab2 = st.tabs(
+        #     ["Hasil Klasifikasi :", "Hasil Klasifikasi Tanpa Treshold :"])
+        # with tab1:
+        #     st.image(image, width=224)
+        #     predicted_class, result_confidence = classify_image_treshold(image)
+        #     st.info(
+        #         # f"Hasil klasifikasi citra Asli adalah ***{predicted_class}***,nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
+        #         f"Hasil klasifikasi citra tersebut adalah ***{predicted_class}***", icon="ℹ️")
 
         # with tab2:
         #     st.image(image, width=224)
@@ -190,6 +196,6 @@ if uploaded_image is not None:
         #     st.info(
         #         f"Hasil klasifikasi citra Shear adalah ***{predicted_class}***, nilai keyakinan ***{result_confidence:.2%}***", icon="ℹ️")
 
-            # st.image(zoomed_out_image, width=224)
-            # predicted_class, result_confidence = classify_image(zoomed_out_image)
-            # st.info(f"Hasil klasifikasi citra yang diperkecil 60% adalah {predicted_class}, dengan nilai keyakinan {result_confidence:.2%}", icon="ℹ️")
+        # st.image(zoomed_out_image, width=224)
+        # predicted_class, result_confidence = classify_image(zoomed_out_image)
+        # st.info(f"Hasil klasifikasi citra yang diperkecil 60% adalah {predicted_class}, dengan nilai keyakinan {result_confidence:.2%}", icon="ℹ️")
