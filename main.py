@@ -1,6 +1,6 @@
 from st_pages import Page, show_pages
 import streamlit as st
-from WebApp.libs import *
+from libs import *
 
 # Optional -- adds the title and icon to the current page
 # st.subheader(":gray[Tugas Akhir]")

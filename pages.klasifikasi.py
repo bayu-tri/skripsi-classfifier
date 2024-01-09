@@ -1,5 +1,5 @@
 import streamlit as st
-from WebApp.libs import *
+from libs import *
 
 # Fungsi untuk mengklasifikasikan gambar
 def classify_image(image):
