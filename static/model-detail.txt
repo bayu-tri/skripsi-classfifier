@@ -1,2 +1,0 @@
-Epoch 30: val_loss improved from 0.20532 to 0.20165, saving model to D:\KULIAH TEKNIK INFORMATIKA\TUGAS AKHIR\JUDUL 2\PROGRAM\Klasifikasi Rimpang\model\MobileNetV2_0.0001LR_32BS_30EPCH_RMSprop_TRAINAUG_SFTMAX\Best-Model.h5
-47/47 [==============================] - 28s 605ms/step - loss: 0.1684 - accuracy: 0.9565 - val_loss: 0.2016 - val_accuracy: 0.9233
