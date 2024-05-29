@@ -48,6 +48,7 @@ def preprocess_image(image):
 
 # Tampilan web Streamlit
 st.header('KLASIFIKASI RIMPANG MENGGUNAKAN METODE CONVOLUTIONAL NEURAL NETWORK ARSITEKTUR MOBILENETV2')
+st.divider()
 st.write("Unggah gambar untuk mengklasifikasi.")
 
 # Unggah gambar
