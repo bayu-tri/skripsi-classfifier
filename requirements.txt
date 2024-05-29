@@ -1,8 +1,8 @@
 st-pages==0.4.4
-numpy
-tensorflow
-pandas
-matplotlib
-opencv-python-headless
-Pillow
-rembg
+numpy==1.24.4
+tensorflow==2.11.0
+pandas==1.5.3
+matplotlib==3.6.3
+opencv-python-headless==4.7.0.72
+Pillow==9.4.0
+rembg==2.0.36
